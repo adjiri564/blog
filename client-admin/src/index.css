@@ -1,0 +1,275 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f6f9;
+    color: #34495e;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Admin Header */
+.admin-header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.admin-header button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Admin Navigation */
+.admin-nav {
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.admin-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.admin-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Post List Table */
+.post-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.post-list-table th,
+.post-list-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.post-list-table th {
+    background-color: #ecf0f1;
+    font-weight: 600;
+}
+
+.post-list-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.post-list-table .actions a,
+.post-list-table .actions button {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.post-list-table .actions .edit {
+    background-color: #3498db;
+    color: white;
+}
+
+.post-list-table .actions .delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Post Form */
+.post-form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.post-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.post-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.post-form input[type="text"],
+.post-form textarea,
+.post-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.post-form input[type="text"]:focus,
+.post-form textarea:focus,
+.post-form select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Style for a shorter username input field */
+.username-input {
+  width: 60%; /* Adjust this value as you see fit */
+}
+
+.post-form button {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.post-form button:hover {
+    background-color: #219653;
+}
+
+
+
+/* --- Professional Login Page Styles --- */
+
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+}
+
+.login-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-error {
+  color: #e74c3c;
+  background-color: #fbe2e2;
+  border: 1px solid #e74c3c;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* --- Styles for the "Show Password" Toggle --- */
+
+.show-password-toggle {
+  display: flex;
+  align-items: center;
+  margin-top: -10px; /* Pull it closer to the password field */
+  margin-bottom: 20px;
+}
+
+.show-password-toggle label {
+  /* Override default label styles for this specific case */
+  margin-bottom: 0;
+  font-weight: normal;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.show-password-toggle input[type='checkbox'] {
+  /* Override default input styles for this specific case */
+  width: auto; /* Let the checkbox have its natural width */
+  margin-right: 8px; /* Add space between the box and the text */
+}
+
