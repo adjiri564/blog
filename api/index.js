@@ -14,11 +14,13 @@ const app = express();
 
 // CORS Configuration
 const allowedOrigins = [
-  'http://localhost:5173', // client-public dev
-  'http://localhost:5174', // client-admin dev
-  'https://blog-public-wine.vercel.app/', // <-- ADD YOUR VERCEL PUBLIC URL HERE
-  'https://blog-admin-xyz.vercel.app', // <-- ADD YOUR VERCEL ADMIN URL HERE
+  'http://localhost:5173', // Your local public client
+  'http://localhost:5174', // Your local admin client
+  'https://blog-public-wine.vercel.app', // <-- THIS IS THE CRUCIAL ADDITION
+  // You should also add your admin site's URL here once it's deployed
+  // e.g., 'https://your-admin-app-url.vercel.app'
 ];
+
 app.use(cors({
   origin: function (origin, callback) {
     // allow requests with no origin (like mobile apps or curl requests)
