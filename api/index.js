@@ -16,6 +16,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(passport.initialize())
 
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Welcome to the Blog API! The server is running.',
+    status: 'ok'
+  });
+});
+
 //Routes
 app.use('/auth', authRouter);
 app.use('/posts', postRouter);
