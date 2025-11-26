@@ -11,7 +11,26 @@ const commentRouter = require('./routes/comments');
 const app = express();
 
 //Middleware
-app.use(cors());
+
+// CORS Configuration
+const allowedOrigins = [
+  'http://localhost:5173', // client-public dev
+  'http://localhost:5174', // client-admin dev
+  'https://blog-public-wine.vercel.app/', // <-- ADD YOUR VERCEL PUBLIC URL HERE
+  'https://blog-admin-xyz.vercel.app', // <-- ADD YOUR VERCEL ADMIN URL HERE
+];
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  }
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(passport.initialize())
