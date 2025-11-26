@@ -17,6 +17,7 @@ const allowedOrigins = [
   'http://localhost:5173', // Your local public client
   'http://localhost:5174', // Your local admin client
   'https://blog-public-wine.vercel.app', // <-- THIS IS THE CRUCIAL ADDITION
+  'https://blog-admin-one-pearl.vercel.app'
   // You should also add your admin site's URL here once it's deployed
   // e.g., 'https://your-admin-app-url.vercel.app'
 ];
